@@ -1,3 +1,3 @@
 # galacticcgames.github.io
 The Galacticc Games Github Page.
-This site is currently under construction. It will be updated with accurate information shortly. 
+Refer to the index.html for all the necessary info.
