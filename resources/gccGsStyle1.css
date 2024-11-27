@@ -1,0 +1,218 @@
+:root {
+    --galacticc-void-1: #06070a;
+    --galacticc-metal-1: #161e35;
+    --galacticc-metal-2: #0b0d13;
+    --galacticc-starshine-1: rgb(245,242,240);
+    --galacticc-starshine-2: rgb(245,244,243);
+    --galacticc-event-horizon-1: rgb(235, 182, 67);
+    --galacticc-event-horizon-2: rgb(230, 204, 150);
+    --galacticc-event-horizon-3: rgb(235, 120, 67);
+    --galacticc-deep-space-1: rgb(76, 24, 199);
+    --galacticc-deep-space-1a: rgba(76, 24, 199,0.5);
+    --galacticc-nebula-1: rgb(41, 82, 214);
+}
+
+@font-face {
+    font-family: Goldman;
+    src: url(Goldman-Regular.ttf);
+}
+
+@font-face {
+    font-family: Goldman-Bold;
+    src: url(Goldman-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Montserrat-EL;
+    src: url(Montserrat-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-L;
+    src: url(Montserrat-Light.ttf);
+}
+
+html, body {
+    background-color: var(--galacticc-metal-1);
+    z-index: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header" "main" "footer";
+    grid-template-rows: 5rem 1fr 11rem;
+}
+
+header {
+    position:sticky;
+    top: 0px;
+    background-color: var(--galacticc-void-1);
+    grid-area: header;
+    container: site-header / inline-size;
+    z-index: 3;
+}
+
+#site-header {
+    color: var(--galacticc-starshine-2);
+    font-family: Goldman;
+    font-size: 300%; /*to 300%*/
+    padding-left:1.2rem;
+    padding-right:1.2rem;
+    margin-top:0.7rem;
+    margin-bottom:0.7rem;
+    margin-bottom:0.7rem;
+    white-space:nowrap;
+}
+
+@container site-header (width < 454px){
+    #site-header{
+        font-size: 265%;
+    }
+}
+
+@container site-header (width < 390px){
+    #site-header{
+        font-size: 235%;
+    }
+}
+
+#page-header {
+    color: var(--galacticc-event-horizon-1);
+    font-family: Montserrat-EL;
+    font-size: 2.5rem;
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    text-wrap: wrap;
+}
+
+main {
+    grid-area: main;
+    padding-left:0.7rem;
+    padding-right:0.7rem;
+    container: main-page / inline-size;
+    z-index: 2;
+}
+
+#main-page-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:space-around;
+    column-gap: 1%;
+    z-index:inherit;
+}
+
+.main-page-header-container {
+    order: 1;
+    border: 2px solid var(--galacticc-nebula-1);
+    border-radius: 15px;
+    background-image: url(triangles-download-header.svg);
+}
+
+.main-page-header-container:hover > #page-header{
+    opacity: 1.0;
+}
+
+.main-page-content-container {
+    order: 2;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:space-around;
+    column-gap: 1%;
+    padding-left:3rem;
+    padding-right:3rem;
+}
+
+.main-page-important-info-container {
+    background-color: var(--galacticc-deep-space-1a);
+    border-radius: 20px;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+}
+
+.main-page-content-block-container {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    color: var(--galacticc-starshine-2);
+    font-family: Montserrat-L;
+    font-size: 1.1rem;
+}
+
+.inner-important-info-content {
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+}
+.main-page-content-block-content {
+    margin-bottom: 1.5rem;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+a:link {
+    color: var(--galacticc-event-horizon-1);
+}
+
+a:visited {
+    color: var(--galacticc-event-horizon-3);
+}
+
+a:hover {
+    color: var(--galacticc-event-horizon-2);
+}
+
+a:active {
+    color: var(--galacticc-starshine-2);
+}
+
+@container main-page (width < 431px){
+    .main-page-content-container {
+        padding-left:1.3rem;
+        padding-right:1.3rem;
+    }
+}
+
+footer {
+    background: linear-gradient(0deg, var(--galacticc-void-1) -50%, var(--galacticc-deep-space-1) 600%);
+    text-align: center;
+    grid-area: footer;
+    height: 11rem;
+    z-index: 2;
+}
+
+#footer-logo {
+    width: 10%;
+    min-width:75px;
+    max-width: 100px;
+}
+
+#footer-hr {
+    margin-bottom: 2rem;
+    border-color: var(--galacticc-metal-2);
+    width: 95%;
+}
+
+.footer-text {
+    color: var(--galacticc-starshine-1);
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bg-img {
+    position: fixed;
+    filter: hue-rotate(20deg);
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+}
+  
