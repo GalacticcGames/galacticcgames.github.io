@@ -69,13 +69,13 @@ header {
     white-space:nowrap;
 }
 
-@container site-header (width < 454px){
+@container site-header (width < 464px){
     #site-header{
         font-size: 265%;
     }
 }
 
-@container site-header (width < 390px){
+@container site-header (width < 400px){
     #site-header{
         font-size: 235%;
     }
