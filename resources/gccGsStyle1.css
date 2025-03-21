@@ -299,7 +299,7 @@ footer {
     background: linear-gradient(0deg, var(--galacticc-void-1) -50%, var(--galacticc-deep-space-1) 600%);
     text-align: center;
     grid-area: footer;
-    height: 11rem;
+    height: 14rem;
     z-index: 2;
 }
 
@@ -342,4 +342,54 @@ footer {
     height:auto;
     width: 100%;
 }
-  
+
+#footer-info {
+    background-color: black;
+    color: white;
+    margin-left: 15%;
+    margin-right: 15%;
+    transform: skew(45deg);
+}
+
+#footer-socials {
+    position: inherit;
+    transform: skew(-45deg);
+}
+
+.footer-social-emphasis {
+    background-color:var(--galacticc-event-horizon-1);
+    height: 2px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#fse-1 {
+    margin-left: 85%;
+    transform: translateY(0.3rem);
+}
+
+#fse-2 {
+    margin-right: 85%;
+    transform: translateY(-0.3rem);
+}
+ 
+.footer-social-thumbnail {
+    max-width: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    zoom:1;
+    -moz-transform: scale(1);
+    transition: all 0.5s ease-out;
+}
+
+.footer-social-thumbnail:hover {
+    transform: scale(1.075);
+    -moz-transform: scale(1.075);
+}
+
+#x-logo-correction{
+    max-width: 22px;
+    position: relative;
+}
